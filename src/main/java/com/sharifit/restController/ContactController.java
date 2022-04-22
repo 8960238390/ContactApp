@@ -42,7 +42,7 @@ public class ContactController {
 	}
 	
 	@GetMapping("/contact/{id}")
-	public ResponseEntity<Contact> edit(@PathVariable("id") int id) {
+	public ResponseEntity<Contact> edit(@PathVariable int id) {
 	
 		Contact contact = contactService.edit(id);
 		
@@ -53,7 +53,7 @@ public class ContactController {
 	}
 	
 	@DeleteMapping("/contact/{id}")
-	public ResponseEntity<String> delete(@PathVariable("id") int id) {
+	public ResponseEntity<String> delete(@PathVariable int id) {
 		
 		int result = contactService.delete(id);
 		
