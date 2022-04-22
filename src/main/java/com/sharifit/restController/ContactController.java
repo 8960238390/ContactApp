@@ -41,7 +41,7 @@ public class ContactController {
 		return new ResponseEntity<>("FAILED",HttpStatus.EXPECTATION_FAILED);
 	}
 	
-	@GetMapping("contact/{id}")
+	@GetMapping("/contact/{id}")
 	public ResponseEntity<Contact> edit(@PathVariable("id") int id) {
 	
 		Contact contact = contactService.edit(id);
@@ -52,7 +52,7 @@ public class ContactController {
 		return new ResponseEntity<>(contact,HttpStatus.FOUND);
 	}
 	
-	@DeleteMapping("contact/{id}")
+	@DeleteMapping("/contact/{id}")
 	public ResponseEntity<String> delete(@PathVariable("id") int id) {
 		
 		int result = contactService.delete(id);
