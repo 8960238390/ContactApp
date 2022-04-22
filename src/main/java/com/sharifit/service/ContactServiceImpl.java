@@ -1,6 +1,7 @@
 package com.sharifit.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -38,7 +39,15 @@ public class ContactServiceImpl implements ContactService {
 	@Override
 	public Contact edit(int id) {
 		
-		Contact contact = repo.getById(id);
+		Optional<Contact> result = repo.findById(id);
+		Contact contact;
+		
+		if(result.isPresent()) {
+			contact = result.get();
+		}
+		else {
+			contact = null;
+		}
 		
 		
 		return contact;
