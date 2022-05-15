@@ -1,4 +1,4 @@
-package com.sharifit.entity;
+package in.ashokit.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -18,4 +18,5 @@ public class Contact {
 	private String name;
 	private String email;
 	private long phno;
+	private String active_sw;
 }

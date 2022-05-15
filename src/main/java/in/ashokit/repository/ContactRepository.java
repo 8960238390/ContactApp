@@ -1,8 +1,8 @@
-package com.sharifit.repository;
+package in.ashokit.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.sharifit.entity.Contact;
+import in.ashokit.entity.Contact;
 
 public interface ContactRepository extends JpaRepository<Contact, Integer> {
 

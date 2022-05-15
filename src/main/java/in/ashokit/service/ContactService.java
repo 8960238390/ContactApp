@@ -1,8 +1,8 @@
-package com.sharifit.service;
+package in.ashokit.service;
 
 import java.util.List;
 
-import com.sharifit.entity.Contact;
+import in.ashokit.entity.Contact;
 
 public interface ContactService {
 
