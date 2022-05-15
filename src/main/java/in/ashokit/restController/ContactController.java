@@ -51,7 +51,7 @@ public class ContactController {
 		Contact contact = contactService.edit(id);
 		
 		if(contact == null) {
-			new ResponseEntity<>(null,HttpStatus.NOT_FOUND);
+			return new ResponseEntity<>(null,HttpStatus.NOT_FOUND);
 		}
 		return new ResponseEntity<>(contact,HttpStatus.FOUND);
 	}
