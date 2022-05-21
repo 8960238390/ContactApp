@@ -53,7 +53,7 @@ public class ContactController {
 		if(contact == null) {
 			return new ResponseEntity<>(null,HttpStatus.NOT_FOUND);
 		}
-		return new ResponseEntity<>(contact,HttpStatus.FOUND);
+		return new ResponseEntity<>(contact,HttpStatus.OK);
 	}
 	
 	@DeleteMapping("/contact/{id}")
